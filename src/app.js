@@ -1,7 +1,7 @@
 const btn = document.querySelector('.btn');
-const menu = document.querySelector('.menu')
-const x = document.querySelector('.x')
-const btns = document.querySelector('.btns')
+const menu = document.querySelector('.menu');
+const x = document.querySelector('.x');
+const btns = document.querySelector('.btns');
 
 
 //fungsi slidebar
@@ -11,9 +11,41 @@ btn.addEventListener('click', function() {
 x.addEventListener('click', function() {
   menu.classList.remove('menuup');
 })
-
 //animasi gsap
-gsap.to('.logo', {y:0, opacity:1, duration:2, ease:"easeIn"})
-gsap.to('.btn', {y:0, opacity:1, duration:2, ease:"easeIn"})
-gsap.to('.btns', {y:0, opacity:1, duration:2, ease:"easeIn"})
+//gsap.registerPlugins(scrollTrigger)
+const timeline = gsap.timeline(0.1);
+timeline.to(".logo", { duration: 1, x: 0, opacity: 1 });
+timeline.to(".nav", { duration: 1, x: 0, opacity: 1 });
 
+timeline.to(".btn", { duration: 1, x: 0, opacity: 1 });
+timeline.to(".hiro-judul", { duration: 1, y: 0, opacity: 1 });
+timeline.to(".hiro-sub", { duration: 1, y: 0, opacity: 1 });
+timeline.to(".hiro-btn", {duration: 1, y: 0, opacity: 1 })
+
+gsap.to(".hiro-text", {
+  opacity: 0,
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".hiro-text",
+    start: "center center",
+    end: "botom",
+    duration: 2,
+    ease: "easeIn",
+    scrub: true,
+  },
+  
+})
+
+gsap.to(".blog", {
+    opacity: 1,
+  scrollTrigger: {
+    trigger: ".blog",
+    start: "top center",
+    end: "botom",
+    duration: 2,
+    ease: "easeOut",
+    scrub: true,
+  },
+})
+// Memutar timeline
+timeline.play();
