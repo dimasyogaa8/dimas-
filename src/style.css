@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.darkmode {
+  background-color: black;
+  color: white;
+}
+body{
+  color: black;
+  background: white;
+}
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+}
+
+.logo {
+  margin: auto 2%;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.logo h1{
+  font-size: 15px;
+}
+.nav {
+  margin: auto 5%;
+}
+.nav ul{
+  display: flex;
+  list-style: none;
+  
+}
+.nav li a{
+  text-decoration: none;
+  margin-right: 10px;
+  color: black;
+}
+.btn {
+  display: none;
+}
+.menu {
+  display: none;
+}
+
+
+
+@media (max-width: 760px) {
+  .navbar {
+    z-index: 1;
+  }
+  .btn {
+    display: block;
+    transform: translateY(-100%);
+    opacity: 0;
+    margin: auto 5%;
+  }
+  
+  .menu {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: white;
+    z-index: 999999;
+    box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+    top: -1px;
+    display: block;
+    
+  }
+  .menuup {
+    transform: translateX(0);
+    
+   
+  }
+  .nav {
+    display: none;
+  }
+  @keyframes fade{
+  100% {
+    transform: translateX(0);
+    animation-delay: 1s;
+  }
+}
+.tab {
+  margin: 5% 90%;
+}
+.btns {
+  margin-right: 20px;
+}
+.menu ul{
+  list-style: none;
+}
+.menu li{
+  margin: 12% 15%;
+  
+}
+.menu li a{
+  text-decoration: none;
+  color: black;
+  font-size: 30px
+}
+}
