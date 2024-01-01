@@ -36,7 +36,7 @@ gsap.to(".hiro-text", {
   duration: 2,
   scrollTrigger: {
     trigger: ".hiro-text",
-    start: "center center",
+    start: "center top",
     end: "botom",
     duration: 2,
     ease: "easeIn",
@@ -52,6 +52,18 @@ gsap.to(".blog", {
     trigger: ".blog",
     start: "top center",
     end: "botom",
+    duration: 2,
+    ease: "easeIn",
+    scrub: true,
+  },
+})
+gsap.to(".project", {
+    opacity: 1,
+    x:0,
+  scrollTrigger: {
+    trigger: ".project",
+    start: "botom center",
+    end: "botom botom",
     duration: 2,
     ease: "easeIn",
     scrub: true,
