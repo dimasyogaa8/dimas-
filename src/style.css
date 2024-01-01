@@ -17,11 +17,10 @@
   }
 }
 body{
-  color: black;
-  background: white;
+  scroll-behavior: smooth;
 }
 .darkmode {
-  background-color: black;
+  background: rgba(57, 57, 59, 1);
   color: white;
 }
 .navbar {
@@ -31,7 +30,6 @@ body{
   justify-content: space-between;
   justify-items: center;
   align-content: center;
-  background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(2px);
   top: 0;
   left: 0;
@@ -175,7 +173,7 @@ body{
   padding: 2% 2%;
 }
 .blog-judul h2{
-  font-weight: bold;
+  color: black;
   font-family: 'Roboto Mono', monospace;
   
 }
@@ -199,19 +197,19 @@ body{
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     z-index: 999999;
-    transform: translateX(-100%);
-    transition: all 0.5s ease-in-out;
+    transform: translateY(-100%);
+    transition: all 1s ease-in;
     top: 0;
     left: 0;
     bottom: 0;
     display: block;
     position: fixed;
-    
+    transform: translateY(100%, 100%);
     
   }
   .menuup {
-    transform: translateX(0);
-    top:  50%;
+    transform: translateY(0);
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     
@@ -270,7 +268,6 @@ body{
 .blog {
   width: 100%;
   height: 100vh;
-  background: white;
   opacity: 0;
   color: black;
   display: flex;
@@ -341,9 +338,11 @@ body{
   width: 6px;
   height: 150px;
   position: absolute;
-  background: black;
+  background: red;
   margin-left: -10px;
   
 }
-
+.btns {
+  margin: 0 50%;
+}
 }

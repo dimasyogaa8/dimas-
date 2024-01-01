@@ -2,7 +2,7 @@ const btn = document.querySelector('.btn');
 const menu = document.querySelector('.menu');
 const x = document.querySelector('.x');
 const btns = document.querySelector('.btns');
-
+const line = document.querySelector('.timeline');
 
 //fungsi slidebar
 btn.addEventListener('click', function() {
@@ -50,3 +50,8 @@ gsap.to(".blog", {
 })
 // Memutar timeline
 timeline.play();
+
+/*btns.addEventListener('click', function() {
+ alert('ini berfungsi ');
+ document.body.classList.toggle('darkmode');
+})*/
