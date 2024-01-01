@@ -17,7 +17,6 @@
   }
 }
 body{
-  scroll-behavior: smooth;
 }
 .darkmode {
   background: rgba(57, 57, 59, 1);
@@ -227,7 +226,7 @@ body{
   }
 }
 .tab {
-  margin: 5% 90%;
+  margin: 9% 90%;
 }
 .btns {
   margin-right: 20px;
