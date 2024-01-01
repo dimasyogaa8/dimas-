@@ -197,19 +197,19 @@ body{
     backdrop-filter: blur(10px);
     z-index: 999999;
     transform: translateY(-100%);
-    transition: all 1s ease-in;
+    transition: all 2s ease;
     top: 0;
     left: 0;
     bottom: 0;
     display: block;
     position: fixed;
-    transform: translateY(100%, 100%);
+    transform: translateY(-100%, -100%);
     
   }
   .menuup {
-    transform: translateY(0);
     top: 50%;
     left: 50%;
+    transform: translateY(0);
     transform: translate(-50%, -50%);
     
     

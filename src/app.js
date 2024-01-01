@@ -6,22 +6,31 @@ const line = document.querySelector('.timeline');
 
 //fungsi slidebar
 btn.addEventListener('click', function() {
-  menu.classList.toggle('menuup');
+  menu.classList.toggle('menuup'); //saat btn di klick maka menu secara otomatis akan di tambahkan class bernama menuup
 })
+//fungsi tombol close
 x.addEventListener('click', function() {
-  menu.classList.remove('menuup');
+  menu.classList.remove('menuup'); //untuk meremove class menuup dan juga menutup tampilan menu
+})
+//btn menu
+menu.addEventListener('click', function(e) {
+  if (e.target.className == 'cont') {
+    menu.classList.remove('menuup');//untuk membuat saat list di klik maka menu akan langsung tertutup secara otomatis.
+  }
 })
 //animasi gsap
 //gsap.registerPlugins(scrollTrigger)
 const timeline = gsap.timeline(0.1);
-timeline.to(".logo", { duration: 1, x: 0, opacity: 1 });
-timeline.to(".nav", { duration: 1, x: 0, opacity: 1 });
+timeline.to(".logo", { duration: 1, x: 0, opacity: 1 });//gsap logo navbar
+timeline.to(".nav", { duration: 1, x: 0, opacity: 1 });//gsap nav desktop 
 
-timeline.to(".btn", { duration: 1, x: 0, opacity: 1 });
-timeline.to(".hiro-judul", { duration: 1, y: 0, opacity: 1 });
-timeline.to(".hiro-sub", { duration: 1, y: 0, opacity: 1 });
-timeline.to(".hiro-btn", {duration: 1, y: 0, opacity: 1 })
+timeline.to(".btn", { duration: 1, x: 0, opacity: 1 });//gsap Hamburgermenu
+timeline.to(".hiro-judul", { duration: 1, y: 0, opacity: 1 });//gsap untuk hiro bagian judul
+timeline.to(".hiro-sub", { duration: 1, y: 0, opacity: 1 });//gsap untuk hiro subtext (p)
+timeline.to(".hiro-btn", {duration: 1, y: 0, opacity: 1 })//gsap untuk btn di hiro 'scroll down'
 
+
+//area scrollTrigger
 gsap.to(".hiro-text", {
   opacity: 0,
   duration: 2,
