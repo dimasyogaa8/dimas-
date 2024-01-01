@@ -38,12 +38,13 @@ gsap.to(".hiro-text", {
 
 gsap.to(".blog", {
     opacity: 1,
+    y:0,
   scrollTrigger: {
     trigger: ".blog",
     start: "top center",
     end: "botom",
     duration: 2,
-    ease: "easeOut",
+    ease: "easeIn",
     scrub: true,
   },
 })

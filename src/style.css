@@ -99,6 +99,7 @@ body{
   justify-content: center;
   justify-items: center;
   align-content: center;
+  transform: translateY(20%);
 }
 .hiro-sub {
   transform: translateY(-100%);
@@ -170,6 +171,17 @@ body{
   margin: auto;
 }
 
+.blog-judul{
+  padding: 2% 2%;
+}
+.blog-judul h2{
+  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
+  
+}
+.blog-judul p{
+  font-family: 'Fira Code', monospace;
+}
 @media (max-width: 839px) {
   .navbar {
     z-index: 1;
