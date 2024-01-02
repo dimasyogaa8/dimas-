@@ -19,7 +19,16 @@
 body{
 }
 .darkmode {
-  background: rgba(57, 57, 59, 1);
+  background: black;
+  color: white;
+}
+.darkmode .nav li a{
+  color: white;
+}
+.darkmode .blog-judul h2{
+  color: white;
+}
+.darkmode .blog-judul p{
   color: white;
 }
 .navbar {

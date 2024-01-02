@@ -3,7 +3,7 @@ const menu = document.querySelector('.menu');
 const x = document.querySelector('.x');
 const btns = document.querySelector('.btns');
 const line = document.querySelector('.timeline');
-
+const btnd = document.querySelector('.btnd');
 //fungsi slidebar
 btn.addEventListener('click', function() {
   menu.classList.toggle('menuup'); //saat btn di klick maka menu secara otomatis akan di tambahkan class bernama menuup
@@ -20,7 +20,7 @@ menu.addEventListener('click', function(e) {
 })
 //animasi gsap
 //gsap.registerPlugins(scrollTrigger)
-const timeline = gsap.timeline(0.1);
+const timeline = gsap.timeline();
 timeline.to(".logo", { duration: 1, x: 0, opacity: 1 });//gsap logo navbar
 timeline.to(".nav", { duration: 1, x: 0, opacity: 1 });//gsap nav desktop 
 
@@ -72,7 +72,16 @@ gsap.to(".project", {
 // Memutar timeline
 timeline.play();
 
-/*btns.addEventListener('click', function() {
- alert('ini berfungsi ');
+btns.addEventListener('click', function() {
  document.body.classList.toggle('darkmode');
-})*/
+})
+btnd.addEventListener('click', function() {
+ document.body.classList.toggle('darkmode');
+})
+
+new Typed('#typed',{
+  strings : ['Hai👋','Nama saya','Dimas yoga Kurniawan'],
+  typeSpeed : 100,
+  delaySpeed : 8000,
+  loop : true
+});
